@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Menu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<section>
+    <a *ngFor="let item of categorias"
+      [ngStyle]="{'background-image':'url('+item.fotoUrl+')'}"
+      [routerLink]="['/categorias',item.nombre]"
+    >
+      <span>{{item.nombre}}</span>
+    </a>  
+  </section>
+</ion-content>
+
+  <!--En vez de poner categoria puedo poner cualquier cosa, pero tengo que repetirlo en donde dice .nombre-->
+  <!--<span>{{item.nombre}}</span>-->
